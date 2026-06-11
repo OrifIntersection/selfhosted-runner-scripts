@@ -1,0 +1,21 @@
+{
+  "name": "selfhosted-runner-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/OrifIntersection/selfhosted-runner-scripts#readme",
+  "bugs": {
+    "url": "https://github.com/OrifIntersection/selfhosted-runner-scripts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OrifIntersection/selfhosted-runner-scripts.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "generate-host.js",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "pocketbase": "^0.27.0"
+  }
+}

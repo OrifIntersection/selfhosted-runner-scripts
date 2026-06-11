@@ -3,7 +3,7 @@ import "dotenv/config";
 import { execSync } from "child_process";
 
 const repo = process.argv[2];
-const pb = new PocketBase("https://is-dev.applications.ws");
+const pb = new PocketBase("http://127.0.0.1:8090");
 
 await pb
 	.collection("_superusers")

@@ -1,13 +1,14 @@
 import PocketBase from "pocketbase";
-import "dotenv/config";
 import { execSync } from "child_process";
 
 const repo = process.argv[2];
 const pb = new PocketBase("http://127.0.0.1:8090");
+const PASSWORD = null;
+if (!PASSWORD) throw new Error("Forgot to set db password.");
 
 await pb
 	.collection("_superusers")
-	.authWithPassword("ljhaesler@protonmail.com", process.env.PASSWORD);
+	.authWithPassword("ljhaesler@protonmail.com", PASSWORD);
 
 const hostData = await pb
 	.collection("hosts")

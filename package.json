@@ -15,7 +15,6 @@
   "type": "module",
   "main": "generate-host.js",
   "dependencies": {
-    "dotenv": "^17.4.2",
     "pocketbase": "^0.27.0"
   }
 }

@@ -1,14 +1,15 @@
 import PocketBase from "pocketbase";
-import "dotenv/config";
 import { execSync } from "child_process";
 import fs from "fs";
 
 const repo = process.argv[2];
 const pb = new PocketBase("http://127.0.0.1:8090");
+const PASSWORD = null;
+if (!PASSWORD) throw new Error("Forgot to set db password.");
 
 await pb
 	.collection("_superusers")
-	.authWithPassword("ljhaesler@protonmail.com", process.env.PASSWORD);
+	.authWithPassword("ljhaesler@protonmail.com", PASSWORD);
 
 // basically this code will check if a repo already exists, and if it does, return the subdomain name and the port for that repo. If it doesn't, it will generate a new subdomain name and port for that repo, and then create a new Apache directive for that subdomain.
 // a total of 1296 domains are possible with these animal-adjective combinations
